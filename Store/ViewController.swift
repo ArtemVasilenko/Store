@@ -44,8 +44,8 @@ class ViewController: UIViewController, MyProtocol {
 }
     
     @IBOutlet weak var mytextView: UITextView!
-    //@IBOutlet weak var numberTextField: UITextField!
-    //@IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var numberTextField: UITextField!
+    @IBOutlet weak var nameTextField: UITextField!
     
     override func viewWillAppear(_ animated: Bool) {
         mytextView.text = getList()
@@ -54,8 +54,8 @@ class ViewController: UIViewController, MyProtocol {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //numberTextField.isEnabled = false
-        //nameTextField.isEnabled = false
+        numberTextField.isEnabled = false
+        nameTextField.isEnabled = false
         getUrlDir()
         createDirectory()
         getUrl()
