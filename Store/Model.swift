@@ -1,4 +1,9 @@
-protocol MyProtocol { }
+
+protocol MyProtocol {
+    func addNewStudent(_ number: String, _ name: String)
+    func clear()
+    func getList() -> String
+}
 
 
 //struct Model {
@@ -23,7 +28,7 @@ protocol MyProtocol { }
 
 extension MyProtocol {
     func addNewStudent(_ number: String, _ name: String) {
-        Students.groupStudents.append(Student.init(number: number, name: name))
+        Students.groupStudents.append(Student(number: number, name: name))
     }
     
     func clear() {

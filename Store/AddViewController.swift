@@ -1,10 +1,4 @@
-//
-//  AddViewController.swift
-//  Store
-//
-//  Created by Артем on 2/5/19.
-//  Copyright © 2019 Артем. All rights reserved.
-//
+
 
 import UIKit
 

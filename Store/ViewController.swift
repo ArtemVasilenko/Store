@@ -17,6 +17,7 @@ class ViewController: UIViewController, MyProtocol {
         } catch {
             print(error)
         }
+        
     }
     
     func createFile() {
@@ -34,19 +35,17 @@ class ViewController: UIViewController, MyProtocol {
         }
         
     }
-    
-    
     func createDirectory() {
-        do {
-            try fm.createDirectory(at: urlDir, withIntermediateDirectories: true)
-        } catch {
-            print(error)
-        }
+    do {
+        try fm.createDirectory(at: urlDir, withIntermediateDirectories: true)
+    } catch {
+        print(error)
     }
+}
     
     @IBOutlet weak var mytextView: UITextView!
-    @IBOutlet weak var numberTextField: UITextField!
-    @IBOutlet weak var nameTextField: UITextField!
+    //@IBOutlet weak var numberTextField: UITextField!
+    //@IBOutlet weak var nameTextField: UITextField!
     
     override func viewWillAppear(_ animated: Bool) {
         mytextView.text = getList()
@@ -55,8 +54,8 @@ class ViewController: UIViewController, MyProtocol {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        numberTextField.isEnabled = false
-        nameTextField.isEnabled = false
+        //numberTextField.isEnabled = false
+        //nameTextField.isEnabled = false
         getUrlDir()
         createDirectory()
         getUrl()
